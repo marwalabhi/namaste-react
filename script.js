@@ -1,31 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const ComInsideAnother = () => {
-  return <i> I am component inside another component </i>
-}
+import IRCTCLogo from "./assets/img/IRCTC-Logo.png";
+import userIcon from "./assets/img/usericon2.png";
 
-const FunComponent = () => (
-  <div className="title">
-    <h1 style={{color: "purple"}}>Swatantra Senani: बाल गंगाधर तिलक</h1>
-    <h2 style={{background: "skyblue", fontFamily: "sans-serif", color: "darkblue"}}>samasya, sansadhano ki kami nhi hai kami hai to sirf: </h2>
-    <h3 style={{color: "orangered", background: "yellow"}}>ichashakti ki </h3>
-    {ComInsideAnother()}
-  </div>
-)
-
-const title = (
-  <div className="title">
-    <h1>Swatantra Senani: Bal Gangadhar Tilak</h1>
-    <h2>samasya, sansadhano ki kami nhi hai kami hai to sirf: </h2>
-    <h3>ichashakti ki </h3>
-    <FunComponent />
-  </div>
-)
-
-
+const HeaderComponent = () => (
+  <nav className="header">
+    <div className="logo">
+    <img src = {IRCTCLogo} alt="logo"></img>
+    </div>
+    <div className="searchBar">
+      <input type="text" placeholder="Enter PNR no." ></input>
+    </div>
+    <div className="userIcon">
+      <img src = {userIcon} alt="userIcon" />
+      <b>Login</b>
+    </div>
+  </nav>
+  
+);
 
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(title);
+root.render(<HeaderComponent />);
