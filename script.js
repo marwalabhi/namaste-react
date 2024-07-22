@@ -1,22 +1,31 @@
-const content = [
-  React.createElement("h1", { class: "intro" }, "Hello from React!"),
-  [
-    React.createElement("div", { class: "grandParent" }, [
-      React.createElement("div", { class: "parent" }, [
-        React.createElement("div", { class: "child" }, [
-          React.createElement("button", {}, "Click Me"),
-          React.createElement("p", {}, "DOM Manipulation using React"),
-        ]),
-      ]),
-    ]),
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-    React.createElement("div", { class: "thank" }, [
-      React.createElement("h3", {}, [
-        React.createElement("i", {}, "Thank You!"),
-      ]),
-    ]),
-  ],
-];
+const ComInsideAnother = () => {
+  return <i> I am component inside another component </i>
+}
+
+const FunComponent = () => (
+  <div className="title">
+    <h1 style={{color: "purple"}}>Swatantra Senani: बाल गंगाधर तिलक</h1>
+    <h2 style={{background: "skyblue", fontFamily: "sans-serif", color: "darkblue"}}>samasya, sansadhano ki kami nhi hai kami hai to sirf: </h2>
+    <h3 style={{color: "orangered", background: "yellow"}}>ichashakti ki </h3>
+    {ComInsideAnother()}
+  </div>
+)
+
+const title = (
+  <div className="title">
+    <h1>Swatantra Senani: Bal Gangadhar Tilak</h1>
+    <h2>samasya, sansadhano ki kami nhi hai kami hai to sirf: </h2>
+    <h3>ichashakti ki </h3>
+    <FunComponent />
+  </div>
+)
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(content);
+root.render(title);
