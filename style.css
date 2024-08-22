@@ -1,43 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 .logo {
-    background-color: white;
-    border-radius: 15px;
-    padding: 8px;
-}
-.logo img{
-    width: 150px;
+  width: 185px;
+  border-radius: 5px;
+  box-shadow: 0px 22px 40px 0px #151d311a;
 }
 .header {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding-block: 20px;
-    background-color: #d0c9d0;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
+  height: 90px;
 }
-.searchBar input[type=text] {
-    border: none;
-    font-size: 17px;
-    padding: 13px;
-    width: 400px;
-    border-radius: 5px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.navOptions a {
+  text-decoration: none;
+  /* padding: 15px; */
+  color: black;
 }
-.searchBar input:focus {
-    outline-color: deepskyblue;
-    outline-style: solid;
-    outline-width: thin;
+.navOptions a:hover {
+  background-color: white;
+  color: orange;
+  border-radius: 5px;
 }
-.userIcon img {
-    width: 40px;
+.navOptions li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 80px;
+  font-size: 17px;
+  font-weight: 500;
 }
-.userIcon {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.search {
+  text-align: center;
+  margin-top: 50px;
+}
+.search input[type="text"] {
+  padding: 16px 16px 16px 40px;
+  width: 500px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid black;
+}
+::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+.filter {
+  display: flex;
+  justify-content: space-around;
+  margin-block: 20px;
+}
+.filter button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(2, 6, 12, 0.15);
+  background-color: white;
+  font-size: 14px;
+  color: rgba(2, 6, 12, 0.75);
+  line-height: 18px;
+  font-weight: 520;
+  cursor: pointer;
+}
+.filter button:active {
+  background-color: rgb(240, 240, 245);
+  border: 1px solid rgba(2, 6, 12, 0.75);
+}
+.res-container {
+  display: flex;
+  gap: 30px;
+  margin: 0 100px;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+/* Card CSS */
+.card_box {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+.res-card {
+  font-family: "Questrial", sans-serif;
+  font-style: normal;
+  width: 18.5rem;
+  height: auto;
+  transition: transform 0.05s ease 0s;
+}
+.content {
+  margin-left: 12px;
+}
+.deli_time {
+  list-style-type: disc;
+}
+.foodImg {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  height: 250px;
+}
+.starRating_duration {
+  display: flex;
+  line-height: 19px;
+  gap: 3px;
+  margin-top: 2px;
+}
+.res_name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.xy1 {
+  color: rgba(2, 6, 12, 0.6);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+}
+.fn {
+  margin-top: 2px;
+  overflow: hidden;
+  line-clamp: 1;
+  width: 100%;
+  line-height: 19px;
+  display: -webkit-box;
+  overflow-wrap: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.rating {
+  font-weight: 480;
+}
+.address {
+  font-size: 16px;
+}
+.duration {
+  font-weight: 520;
+}
+.price {
+  font-weight: 520;
+  font-size: 15.3px;
+  margin-top: 2px;
+  color: maroon;
+}
+.description {
+  color: rgba(2, 6, 12, 0.6);
+  font-weight: 450;
+  margin-top: 5px;
+  text-align: justify;
+}
+.res-card:hover {
+  transform: scale(0.95);
+}
+
+/* Footer Section */
+footer {
+  background-color: black;
+  padding-block: 25px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: "Questrial", sans-serif;
+}
+footer a {
+  text-decoration: none;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  margin-right: 40px;
+}
+.footerPart a:hover {
+  color: orange;
+}
+.pink {
+  color: deeppink;
+}
+.green {
+  color: green;
+}
+.brown {
+  color: brown;
+}
+.logo-container span {
+  font-weight: 600;
+  font-size: 30px;
+  font-family: "Kalam", cursive;
+  font-style: normal;
+}
+.logo-container {
+  margin-left: 25px;
+}
+.raj {
+  font-weight: 450;
+  font-family: "Kalam", cursive;
+  font-style: normal;
+  font-size: 18px;
+}
+
+.loading {
+  text-align: center;
+  padding-block: 100px;
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  background-image: url(./src/assets/hawa.jpg);
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.shimmer_container {
+  display: flex;
+  gap: 30px;
+  margin: 0 100px;
+  flex-wrap: wrap;
+  padding-block: 50px;
+}
+.shimmer-card {
+  width: 18.5rem;
+  height: 250px;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+}
+.user-card {
+  margin: 100px;
+  border: 2px solid black;
+}
+.user-card  {
+  padding: 20px;
+}
+.userImg {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.netStatus {
+  text-align: center;
+  padding-block: 100px;
 }
