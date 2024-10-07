@@ -1,0 +1,19 @@
+.user-card {
+    display: flex;
+    gap: 50px;
+    margin: 100px;
+    border: 2px solid grey;
+    border-radius: 15px;
+  }
+  .user-card {
+    padding: 20px;
+  }
+  .card_content > h2, h3, h4{
+    text-align: left;
+    padding: 10px;
+  }
+  .userImg {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }

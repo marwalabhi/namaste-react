@@ -1,0 +1,30 @@
+.aboutUs{
+  text-align: center;
+  padding: 10px;
+}
+.des{
+  text-align: center;
+  padding: 10px;
+}
+.loggedInUN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: honeydew;
+  font-weight: 500;
+}
+.uname {
+  color: dodgerblue;
+}
+.inputUserName{
+  text-align: center;
+  padding-block: 50px;
+  font-weight: 500;
+}
+.inputUserName input[type = "text"] {
+  padding: 8px 10px;
+  width: 20vw;
+  font-size: 16px;
+  outline-color: dodgerblue;
+  font-weight: 500;
+}

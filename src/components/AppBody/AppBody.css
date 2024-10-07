@@ -1,0 +1,133 @@
+.search {
+  justify-content: center;
+  /* padding-top: 50px; */
+  display: flex;
+  gap: 5px;
+}
+.search input[type="text"] {
+  padding: 16px 16px 16px 16px;
+  width: 500px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid black;
+  outline-color: gray;
+}
+.search_btn {
+  padding: 16px 45px 16px 45px;
+  /* background-color: #d99085; */
+  background-color: rgb(241, 194, 174);
+  /* background: transparent; */
+  /* background-color: rgb(245, 55, 103); */
+  color: brown;
+  font-weight: 600;
+  /* font-weight: 500; */
+  font-size: 16px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+.search_btn:hover {
+  background-color: rgb(232, 180, 157);
+}
+::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+}
+.jaipurRes{
+  font-weight: 800;
+  line-height: 28px;
+  font-size: 24px;
+  text-align: left;
+  /* margin-left: 89px; */
+  margin: 0 calc(5% + 27px);
+  padding-bottom: 15px;
+}
+.hrline {
+  border: 1px solid rgba(112, 112, 113, 0.05);
+  margin: 32px calc(6rem + 10px);
+}
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-block: 20px;
+  cursor: pointer;
+  gap: 20px;
+}
+.show_filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show_filter img {
+  width: 15px;
+}
+.filter button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(2, 6, 12, 0.15);
+  background-color: white;
+  font-size: 14px;
+  color: rgba(2, 6, 12, 0.75);
+  line-height: 18px;
+  font-weight: 520;
+  cursor: pointer;
+}
+button.clearAllFilter {
+  color:  white;
+  background-color: rgb(52, 50, 50);
+}
+.filterCount{
+  background: rgb(255, 82, 0);
+  background-color: black;
+  color: white;
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+}
+.xSign {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.res-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 calc(4vw + 10px);
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+.netStatus {
+  text-align: center;
+  padding-block: 100px;
+}
+.notFindText{
+  color: gray;
+  padding-block: 7rem;
+  text-align: center;
+  flex: 1;
+  line-height: 12px;
+  font-weight: 550;
+  font-size: 20px;  
+}
+.whatsOnYourMind{
+  display: flex;
+  background: rgb(255, 255, 255);
+  width: 100rem;
+  margin: auto;
+  overflow: hidden;
+  /* padding: 50px 10px 30px 10px; */
+  padding: 16px;
+  cursor: pointer;
+}
+div.whatsOnYourMind  img {
+  width: 8rem;
+}

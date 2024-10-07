@@ -1,0 +1,58 @@
+/* accordian Body */
+.accBody {
+  padding: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.dish_Container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 530;
+  align-items: flex-start;
+  color: rgba(2, 6, 12, 0.75);
+  text-align: left;
+}
+.dishDescription {
+  margin: 12px 12px 0 0;
+  text-align: left;
+  color: rgba(2, 6, 12, 0.6);
+  font-size: 16px;
+  text-wrap: wrap;
+}
+.dish_details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.dishPrice {
+  font-size: 16px;
+}
+.dishImage img {
+  border-radius: 12px;
+  object-fit: cover;
+  width: 160px;
+  height: 148px;
+}
+.dishImage {
+  position: relative;
+}
+.add_btn {
+  position: absolute;
+  top: 130px;
+  right: 23px;
+  padding: 8px 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: #1ba672;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  transition: all 100ms ease-in-out 0s;
+}
+.add_btn:hover {
+  background-color: rgb(48, 46, 46);
+}

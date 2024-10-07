@@ -1,0 +1,29 @@
+.cartDesign {
+  text-align: center;
+  margin-block: 50px;
+}
+.clear_btn {
+  padding: 15px 25px;
+  margin: 50px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.clear_btn:hover {
+  background-color: rgb(47, 45, 45);
+}
+/* Cart items */
+.addedItems {
+  width: 60vw;
+  margin: 90px auto;
+  border-radius: 15px;
+}
+.emptyCart {
+  color: grey;
+  padding-block: 200px;
+  font-weight: 550;
+}

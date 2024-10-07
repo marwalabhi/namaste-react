@@ -1,9 +1,10 @@
+# Khamma Ghani 
+Order!! the taste of Rajasthan
 # Namaste React Series 
-# Practice Code
 
-# Food delivery app 
-/* 
-Header
+# Food Ordering App 
+
+**Header**
 - Logo
 - Nav Items
 App Body
@@ -18,5 +19,14 @@ Footer
 - Links
 - Address
 - Contact
-*/
+
+# Redux Toolkit - RTK
+ - Install @reduxjs/toolkit and react-redux 
+ - Build our store 
+ - Connect our store to our app: remember the bridge "react-redux"
+ - Slice (cartSlice) 
+ - dispatch(action)
+ - Selector
+ 
+ - Wix Madefor Text - font-family
 

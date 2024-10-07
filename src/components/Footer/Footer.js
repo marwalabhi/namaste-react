@@ -1,4 +1,5 @@
-import useOnlineStatus from "../utils/useOnlineStatus";
+import useOnlineStatus from "../../utils/useOnlineStatus";
+import "./Footer.css";
 
 const Footer = () => {
 
