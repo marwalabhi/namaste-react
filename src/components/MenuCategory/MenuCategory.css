@@ -1,0 +1,31 @@
+/* accordian styling */
+
+.accordian {
+  border-top: 16px solid rgba(2, 6, 12, 0.05);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  width: 50%;
+  margin: 5px auto;
+}
+.accordianHeader {
+  height: 70px;
+  width: 95%;
+  margin: auto;
+}
+.categoryName {
+  font-size: 18px;
+  font-weight: 650;
+}
+.accordianHeader button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+  height: 100%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

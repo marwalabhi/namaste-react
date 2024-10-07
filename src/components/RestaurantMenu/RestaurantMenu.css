@@ -1,0 +1,30 @@
+/* menu page design  */
+.menu {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .sevices {
+    color: grey;
+    padding: 10px;
+    font-weight: 500;
+  }
+  .cuisine{
+    color: gray;
+    margin-block: 10px;
+    font-weight: 600;
+  }
+  .menuHead{
+    background-color: lightgoldenrodyellow;
+    padding-block: 5px;
+    color: rgba(2, 6, 12, 0.6);
+    width: 50%;
+    border-radius: 8px;
+    margin: auto;
+    letter-spacing: 4px;
+    font-size: 20px;
+  }
+  .veg {
+    font-weight: 600;
+    color: green;
+  }
