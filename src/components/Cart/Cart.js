@@ -20,6 +20,7 @@ const Cart = () => {
     background-color: mistyrose;
     color: purple;
     padding: 20px;
+    cursor: pointer;
   `;
 
   return (
@@ -35,7 +36,7 @@ const Cart = () => {
         </h2>
       )}
       <div className="addedItems">
-        
+
         <ItemList menuItem={cartItems} button = {false}/>
         <Styling>Craving {loggedInUser} !!</Styling>
       </div>

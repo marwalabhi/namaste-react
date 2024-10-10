@@ -24,18 +24,9 @@ const AppBody = () => {
 
   const [isActive, setActive] = useState(false);
   const [isVeg, setVeg] = useState(false);
-
-  const handleButtonClick = () => {
-    setActive(!isActive);
-    if (isActive) {
-      setFilteredRestaurant(listofRestaurants);
-    } else {
-      const ratingFilteredList = filteredRestaurants.filter(
-        (res) => res.info.avgRating > 4
-      );
-      setFilteredRestaurant(ratingFilteredList);
-    }
-  };
+  const [isFastDelivery, setFastDelivery] = useState(false);
+  const [isLessThan300, setLessThan300] = useState(false);
+  const [buttonCount, setButtonCount] = useState(0);
 
   // Styling when state changes
 
@@ -56,16 +47,60 @@ const AppBody = () => {
   const withoutX = {
     display: "none",
   };
-  // filter logic
-
+  
+// Clear all filters
   const clearFilter = () => {
+    setButtonCount(0);
     setActive(false);
     setVeg(false);
+    setFastDelivery(false);
+    setLessThan300(false);
     setFilteredRestaurant(listofRestaurants);
+  };
+
+// Fiter logic functions
+  const filter4Rating = () => {
+    setActive(!isActive);
+    setButtonCount(isActive ? buttonCount - 1 : buttonCount + 1);
+    if (isActive) {
+      setFilteredRestaurant(listofRestaurants);
+    } else {
+      const ratingFilteredList = filteredRestaurants.filter(
+        (res) => res.info.avgRating > 4
+      );
+      setFilteredRestaurant(ratingFilteredList);
+    }
+  };
+  const filterFastDelivery = () => {
+    setFastDelivery(!isFastDelivery);
+    setButtonCount(isFastDelivery ? buttonCount - 1 : buttonCount + 1);
+    if (isFastDelivery) {
+      setFilteredRestaurant(listofRestaurants);
+    } else {
+      const fastDeliveryTimeResList = filteredRestaurants.filter(
+        (res) => res.info.sla.deliveryTime < 26
+      );
+      setFilteredRestaurant(fastDeliveryTimeResList);
+    }
+  };
+  const filterLessThan300 = () => {
+    setLessThan300(!isLessThan300);
+    setButtonCount(isLessThan300 ? buttonCount - 1 : buttonCount + 1);
+    if (isLessThan300) {
+      setFilteredRestaurant(listofRestaurants);
+    } else {
+      const lessThan300List = filteredRestaurants.filter((res) => {
+        const costInNumber = parseInt(res.info.costForTwo.match(/\d+/)[0]);
+        return !isNaN(costInNumber) && costInNumber < 300;
+      });
+      setFilteredRestaurant(lessThan300List);
+    }
   };
   const filterVeg = () => {
     setVeg(!isVeg);
+    setButtonCount(isVeg ? buttonCount - 1 : buttonCount + 1);
   };
+
   console.log("Body component rendered");
 
   useEffect(() => {
@@ -74,6 +109,7 @@ const AppBody = () => {
     console.log(
       "useEffect: render-cycle completed successfully,   effect executed"
     );
+    console.log(listofRestaurants);
 
     // document.title = `You clicked ${count} times`;
   }, []);
@@ -95,9 +131,8 @@ const AppBody = () => {
     console.log("Coverted and stored in json");
 
     const filteredImg = json.data.cards[0].card.card.imageGridCards.info;
-    console.log(filteredImg);
+    // console.log(filteredImg);
     setFoodCategoryImg(filteredImg);
-    
   };
 
   const onlineStatus = useOnlineStatus();
@@ -109,12 +144,7 @@ const AppBody = () => {
       </h1>
     );
 
-
-  
-    console.log(foodCategoryImg);
-    
-
-
+  // console.log(foodCategoryImg);
 
   // returning jsx
 
@@ -123,9 +153,11 @@ const AppBody = () => {
   ) : (
     <div className="bodySection">
       <div className="whatsOnYourMind">
-      {foodCategoryImg.map((img)=> (
-        <span key={img.id}><img src={ImgCategory_CDN_URL + img.imageId}></img></span>
-      ))}
+        {foodCategoryImg.map((img) => (
+          <span key={img.id}>
+            <img src={ImgCategory_CDN_URL + img.imageId}></img>
+          </span>
+        ))}
       </div>
       <hr className="hrline"></hr>
       <div className="search">
@@ -172,9 +204,15 @@ const AppBody = () => {
       <div className="filter">
         <button
           className="filterCountBtn"
-          style={isActive || isVeg ? activeFilterStyle : buttonStyle}
+          style={
+            isActive || isVeg || isLessThan300 || isFastDelivery
+              ? activeFilterStyle
+              : buttonStyle
+          }
         >
-          {(isActive || isVeg) && <span className="filterCount">2</span>}
+          {(isActive || isVeg || isLessThan300 || isFastDelivery) && (
+            <span className="filterCount">{buttonCount}</span>
+          )}
 
           <div>Filter</div>
           <span className="show_filter">
@@ -184,7 +222,7 @@ const AppBody = () => {
 
         <button
           className="filter-btn"
-          onClick={handleButtonClick}
+          onClick={filter4Rating}
           style={isActive ? activeButtonStyle : buttonStyle}
         >
           Rating 4.0+
@@ -192,8 +230,28 @@ const AppBody = () => {
             <img src={cross} alt="cross Sign" />
           </span>
         </button>
-        <button>Fast Delivery</button>
-        <button>Less than Rs. 300</button>
+        <button
+          onClick={filterFastDelivery}
+          style={isFastDelivery ? activeButtonStyle : buttonStyle}
+        >
+          Fast Delivery
+          {isFastDelivery && (
+            <span className="xSign">
+              <img src={cross} alt="cross Sign" />
+            </span>
+          )}
+        </button>
+        <button
+          onClick={filterLessThan300}
+          style={isLessThan300 ? activeButtonStyle : buttonStyle}
+        >
+          Less than Rs. 300
+          {isLessThan300 && (
+            <span className="xSign">
+              <img src={cross} alt="cross Sign" />
+            </span>
+          )}
+        </button>
         <button
           onClick={filterVeg}
           style={isVeg ? activeButtonStyle : buttonStyle}
@@ -217,9 +275,11 @@ const AppBody = () => {
         Restaurants with online food delivery in Jaipur
       </h2>
       <div className="res-container">
+        {/* list of restaurants rendering */}
         {filteredRestaurants.length === 0 && (
           <div className="notFindText">
-            Can't find for text you searched for !! Search for restaurants or its dishes
+            Can't find for text you searched for !! Search for restaurants or
+            its dishes
           </div>
         )}
         {filteredRestaurants.map((restaurant) => (

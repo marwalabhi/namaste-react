@@ -20,7 +20,6 @@ const MenuCategory = ({ data, showItems, setShowIndex, setFalse }) => {
   };
   console.log("data ", data); // output contain
 
-  // const [showNestedIndex, setShowNestedIndex] = useState(0);
 
   const count = data?.card.itemCards?.length || data?.categories?.length;
   // console.log("data", data);
