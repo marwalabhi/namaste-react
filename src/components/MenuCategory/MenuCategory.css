@@ -15,7 +15,7 @@
   font-size: 18px;
   font-weight: 650;
 }
-.accordianHeader button {
+.category_btn {
   padding: 0;
   background: transparent;
   border: none;
@@ -28,4 +28,27 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+/* for nested  */
+.main_container {
+  padding: 24px 16px 16px;
+}
+.nestedCatName{
+  text-align: left;
+  margin-bottom: 24px;
+}
+.nested_header_style {
+  font-size: 18px;
+  font-weight: 650;
+}
+.nCatName{
+  font-size: 16px;
+  font-weight: 550;
+  letter-spacing: -0.3px;
+  line-height: 19px;
+}
+.hr_line{
+  border-bottom: .5px solid #d3d3d3;
+  height: .5px;
+  margin: 20px 0;
 }

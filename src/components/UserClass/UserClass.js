@@ -11,6 +11,7 @@ class UserClass extends React.Component {
         name: "Dummy user",
         location: "Default",
         avatar_url: "image",
+        repos_url: "link",
       },
     };
   }
@@ -37,17 +38,20 @@ class UserClass extends React.Component {
   }
 
   render() {
-    const { name, location, avatar_url } = this.state.userInfo;
+    const { name, location, avatar_url, repos_url } = this.state.userInfo;
 
     console.log(name + " render");
-
+    console.log();
+    
+    
     return (
       <div className="user-card">
         <img className="userImg" src={avatar_url} />
         <div className="card_content">
-          <h2>Name: {name}</h2>
-          <h3>Location: {location}</h3>
-          <h4>Contact: @abhiabhishek</h4>
+          <h2 className="git">Name: {name}</h2>
+          <h3 className="git">Location: {location}</h3>
+          <h4 className="git">Contact: @abhiabhishek</h4>
+          <h4 className="git">Repo Link: <span style={{color: "skyblue", cursor: "pointer"}}>{repos_url}</span></h4>
         </div>
       </div>
     );

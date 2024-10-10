@@ -69,8 +69,8 @@ const RestaurantMenu = () => {
           // Controlled component
           <MenuCategory
             key={category?.card?.card?.title}
-            data={category?.card?.card} 
-            showItems={index === showIndex && isfalse} // index 2  === default 2 and true;
+            data={category?.card} 
+            showItems={index === showIndex && isfalse} 
             setShowIndex={() => setShowIndex(index)}
             setFalse={() =>
               setFalse(isfalse && index === showIndex ? false : true)

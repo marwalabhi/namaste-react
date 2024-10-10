@@ -8,7 +8,7 @@ import UserContext from "../../utils/UserContext";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+  console.log("cartItems: ", cartItems);
 
   const { loggedInUser } = useContext(UserContext);
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Cart = () => {
   };
 
   const Styling = styled.div`
-    background-color: #ff5c8f;
+    background-color: mistyrose;
     color: purple;
     padding: 20px;
   `;
@@ -35,7 +35,8 @@ const Cart = () => {
         </h2>
       )}
       <div className="addedItems">
-        <ItemList items={cartItems} />
+        
+        <ItemList menuItem={cartItems} button = {false}/>
         <Styling>Craving {loggedInUser} !!</Styling>
       </div>
     </div>
