@@ -21,6 +21,7 @@ const Cart = () => {
     color: purple;
     padding: 20px;
     cursor: pointer;
+    font-weight: 580;
   `;
 
   return (
@@ -29,7 +30,7 @@ const Cart = () => {
       <button className="clear_btn" onClick={handleClearCart}>
         Clear Cart
       </button>
-      <hr></hr>
+      <hr className="cartHrLine"></hr>
       {cartItems.length === 0 && (
         <h2 className="emptyCart">
           Your Cart is empty Add items to the cart !
@@ -38,7 +39,7 @@ const Cart = () => {
       <div className="addedItems">
 
         <ItemList menuItem={cartItems} button = {false}/>
-        <Styling>Craving {loggedInUser} !!</Styling>
+        <Styling>Checkout</Styling>
       </div>
     </div>
   );

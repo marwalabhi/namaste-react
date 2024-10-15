@@ -27,3 +27,8 @@
   padding-block: 200px;
   font-weight: 550;
 }
+.cartHrLine{
+  border: 1px solid #d1d1d1;
+  width: 60vw;
+  margin: auto;
+}

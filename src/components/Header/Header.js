@@ -4,46 +4,24 @@ import plate from "../../assets/plate.svg";
 import grocery from "../../assets/groce.svg";
 import UserContext from "../../utils/UserContext";
 import { useSelector } from "react-redux";
+import Login from "../Login/Login.js";
 
 export const Header = () => {
   console.log("header render");
 
-  const [toggle, setToggle] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   const { loggedInUser } = useContext(UserContext);
   // Subscribing to the store using a Selector
   const cartItems = useSelector((store) => store.cart.items);
 
-  const showSideMenu = () => {
-    setToggle(true);
-  };
-  const hideSideMenu = () => {
-    setToggle(false);
-  };
-  const loginStyle = {
-    transform: toggle ? "translateX(0%)" : "translateX(100%)",
-    transition: "transform ease-out .3s",
+  const handleLoginClick = (event) => {
+    event.preventDefault();
+    setShowLogin(true);
   };
   return (
     <>
-      <div
-        className="black-overlay"
-        style={{
-          opacity: toggle ? 1 : 0,
-          visibility: toggle ? "visible" : "hidden",
-        }}
-        onClick={hideSideMenu}
-      >
-        <div
-          onClick={(evt) => evt.stopPropagation()}
-          className="overlay-sidebar"
-          style={loginStyle}
-        >
-          <h2>Login or Create an accont</h2>
-          <input type="number" placholder="Phone number"></input>
-          <button style={{ backgroundColor: "orange" }}>Login</button>
-        </div>
-      </div>
+      <Login onClose={() => setShowLogin(false)} isLogin={showLogin} />
       <header>
         <div className="logo-container">
           <Link
@@ -66,7 +44,9 @@ export const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/offers">Offers <sup className="newOffer"> NEW </sup></Link>
+              <Link to="/offers">
+                Offers <sup className="newOffer"> NEW </sup>
+              </Link>
             </li>
             <li>
               <Link to="/grocery">
@@ -84,7 +64,7 @@ export const Header = () => {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link onClick={() => showSideMenu()}>Sign In</Link>
+              <Link onClick={handleLoginClick}>Sign In</Link>
             </li>
             <li>
               <Link to={"/cart"}>

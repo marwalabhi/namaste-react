@@ -47,8 +47,8 @@ const AppBody = () => {
   const withoutX = {
     display: "none",
   };
-  
-// Clear all filters
+
+  // Clear all filters
   const clearFilter = () => {
     setButtonCount(0);
     setActive(false);
@@ -58,7 +58,7 @@ const AppBody = () => {
     setFilteredRestaurant(listofRestaurants);
   };
 
-// Fiter logic functions
+  // Fiter logic functions
   const filter4Rating = () => {
     setActive(!isActive);
     setButtonCount(isActive ? buttonCount - 1 : buttonCount + 1);
@@ -103,17 +103,6 @@ const AppBody = () => {
 
   console.log("Body component rendered");
 
-  useEffect(() => {
-    // called once after initial render (empty dependency array)
-    fetchData();
-    console.log(
-      "useEffect: render-cycle completed successfully,   effect executed"
-    );
-    console.log(listofRestaurants);
-
-    // document.title = `You clicked ${count} times`;
-  }, []);
-
   const fetchData = async () => {
     // getRestaurants()
     const data = await fetch(
@@ -134,6 +123,17 @@ const AppBody = () => {
     // console.log(filteredImg);
     setFoodCategoryImg(filteredImg);
   };
+
+  useEffect(() => {
+    // called once after initial render (empty dependency array)
+    fetchData();
+    console.log(
+      "useEffect: render-cycle completed successfully,   effect executed"
+    );
+    console.log(listofRestaurants);
+
+    // document.title = `You clicked ${count} times`;
+  }, []);
 
   const onlineStatus = useOnlineStatus();
 
@@ -261,10 +261,7 @@ const AppBody = () => {
             <span className="xSign">
               <img src={cross} alt="cross Sign" />
             </span>
-          )}
-          {/* <span className="xSign" style={isVeg ? withX : withoutX}>
-            <img src={cross} alt="cross Sign" />
-          </span> */}
+          )}  
         </button>
         <button className="clearAllFilter" onClick={clearFilter}>
           Clear all filters
