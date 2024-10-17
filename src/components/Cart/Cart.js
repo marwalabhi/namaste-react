@@ -39,7 +39,7 @@ const Cart = () => {
       <div className="addedItems">
 
         <ItemList menuItem={cartItems} button = {false}/>
-        <Styling>Checkout</Styling>
+        <Styling>Ready to Checkout Click on it!!</Styling>
       </div>
     </div>
   );

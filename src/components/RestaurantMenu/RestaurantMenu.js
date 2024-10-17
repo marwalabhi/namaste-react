@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
 
   const [showIndex, setShowIndex] = useState(0);
   const [isfalse, setFalse] = useState(true);
-
+  
   // Passing resId to Custom hook to fetch restaurant details and returns it
   const resMenu = useRestaurantMenu(resId);
 

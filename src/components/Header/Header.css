@@ -3,7 +3,7 @@ header {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
-  z-index: 3;
+  z-index: 5;
   height: 90px;
   position: sticky;  
   top: 0;
@@ -37,10 +37,20 @@ header {
 .brown {
   color: brown;
 }
+.offerPng{
+  width: 22px;
+}
+.offerContainer{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .newOffer{
   font-size: 11px;
   font-weight: 600;
   color: orange;
+  position: relative;
+  bottom: 10px;
 }
 .grocerySection {
   display: flex;
@@ -49,11 +59,18 @@ header {
   gap: 8px;
 }
 .groceryImg {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
 }
 .grocerySection:hover .groceryImg {
   filter: invert(0.5) sepia(1) hue-rotate(-13deg) saturate(4) brightness(1);
+}
+.offerContainer:hover .offerPng{
+  filter: invert(0.5) sepia(1) hue-rotate(-13deg) saturate(4) brightness(1);
+}
+.navOptions {
+  display: flex;
+  align-items: center;
 }
 .navOptions a {
   text-decoration: none;

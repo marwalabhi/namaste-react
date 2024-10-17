@@ -1,3 +1,59 @@
+.food-cat-heading{
+  display: flex;
+  justify-content: space-between;
+}
+.whatsOnYourMind {
+  width: 100rem;
+  margin: auto;
+  padding-block: 16px;
+}
+.fcat-img-container{
+  cursor: pointer;
+  display: flex;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+}
+.cont-for-each-img{
+  transition-duration: 500ms;
+}
+/* svg:not(:root) {
+  overflow: hidden;
+} */
+div.whatsOnYourMind .f-cat-img {
+  width: 9rem;
+}
+.pn-button-container{
+  position: relative;
+  right: 16px;
+}
+.pn-button-container > button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: inline;
+  margin-right: 12px;
+}
+.pn-arrow{
+  width: 18px;
+}
+.previousBtn,
+.nextBtn {
+  background: rgba(2, 6, 12, 0.15);
+  padding: 8px 8px 4px;
+  border-radius: 100%;
+}
+.home-page-heading {
+  font-weight: 700;
+  line-height: 28px;
+  font-size: 24px;
+  letter-spacing: -0.4px;
+  line-height: 28px;
+}
+/* .search-filter-section{
+  position: sticky;
+  top: 100px;
+  z-index: 3;
+} */
 .search {
   justify-content: center;
   /* padding-top: 50px; */
@@ -34,10 +90,7 @@
   font-size: 16px;
   font-weight: 500;
 }
-.jaipurRes{
-  font-weight: 800;
-  line-height: 28px;
-  font-size: 24px;
+.jaipurRes {
   text-align: left;
   /* margin-left: 89px; */
   margin: 0 calc(5% + 27px);
@@ -78,10 +131,10 @@
   cursor: pointer;
 }
 button.clearAllFilter {
-  color:  white;
+  color: white;
   background-color: rgb(52, 50, 50);
 }
-.filterCount{
+.filterCount {
   background: rgb(255, 82, 0);
   background-color: black;
   color: white;
@@ -98,9 +151,8 @@ button.clearAllFilter {
 }
 .res-container {
   display: flex;
-  justify-content: center;
   gap: 30px;
-  margin: 0 calc(4vw + 10px);
+  margin: 0 calc(6vw + 10px);
   flex-wrap: wrap;
   padding-bottom: 100px;
   overflow: hidden;
@@ -109,25 +161,12 @@ button.clearAllFilter {
   text-align: center;
   padding-block: 100px;
 }
-.notFindText{
+.notFindText {
   color: gray;
   padding-block: 7rem;
   text-align: center;
   flex: 1;
   line-height: 12px;
   font-weight: 550;
-  font-size: 20px;  
-}
-.whatsOnYourMind{
-  display: flex;
-  background: rgb(255, 255, 255);
-  width: 100rem;
-  margin: auto;
-  overflow: hidden;
-  /* padding: 50px 10px 30px 10px; */
-  padding: 16px;
-  cursor: pointer;
-}
-div.whatsOnYourMind  img {
-  width: 8rem;
+  font-size: 20px;
 }

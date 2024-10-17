@@ -10,6 +10,8 @@ import cross from "../../assets/cross1.svg";
 import filter from "../../assets/filter.svg";
 import "./AppBody.css";
 import { ImgCategory_CDN_URL } from "../../utils/constants";
+import previousA from "../../assets/previousArrow.png";
+import nextA from "../../assets/nextArrow.png";
 
 const AppBody = () => {
   // Local state variable - Super powerful variable ~ listofRestaurants is state variable why bcoz react is keeping an eye on it, track it. whenever it updates react will trigger its diff algorithm.
@@ -28,6 +30,7 @@ const AppBody = () => {
   const [isLessThan300, setLessThan300] = useState(false);
   const [buttonCount, setButtonCount] = useState(0);
 
+  const [slider, moveSlider] = useState(0);
   // Styling when state changes
 
   const buttonStyle = {
@@ -145,6 +148,12 @@ const AppBody = () => {
     );
 
   // console.log(foodCategoryImg);
+  const slideToPrevious = () => {
+    moveSlider(slider - 3);
+  };
+  const slideToNext = () => {
+    slider < 9 && moveSlider(slider + 3);
+  };
 
   // returning jsx
 
@@ -153,122 +162,152 @@ const AppBody = () => {
   ) : (
     <div className="bodySection">
       <div className="whatsOnYourMind">
-        {foodCategoryImg.map((img) => (
-          <span key={img.id}>
-            <img src={ImgCategory_CDN_URL + img.imageId}></img>
-          </span>
-        ))}
+        <div className="food-cat-heading">
+          <span className="home-page-heading">What's on your mind?</span>
+          <div className="pn-button-container">
+            <button onClick={slideToPrevious}>
+              <div className="previousBtn">
+                <img
+                  src={previousA}
+                  className="pn-arrow"
+                  alt="previous button"
+                />
+              </div>
+            </button>
+            <button onClick={slideToNext}>
+              <div className="nextBtn">
+                <img src={nextA} className="pn-arrow" alt="next button" />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className="fcat-img-container">
+          {foodCategoryImg.map((img) => (
+            <span className="cont-for-each-img"
+              key={img.id}
+              style={{ transform: `translateX(-${slider * 100}%)` }}
+            >
+              <img
+                className="f-cat-img"
+                src={ImgCategory_CDN_URL + img.imageId}
+              ></img>
+            </span>
+          ))}
+        </div>
       </div>
       <hr className="hrline"></hr>
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Search for restaurants and food"
-          className="searchBox"
-          data-testid="searchInput"
-          value={searchText}
-          onChange={(e) => {
-            setSearchText(e.target.value);
-          }}
-        ></input>
-        <button
-          className="search_btn"
-          onClick={() => {
-            // Filter the restaurant cards and update the UI
-            // searchtext
-            console.log(searchText.length);
-            if (searchText.length > 0) {
-              const searchFilteredList = listofRestaurants.filter(
-                (res) =>
-                  res.info.name
-                    .toLowerCase()
-                    .includes(searchText.toLowerCase()) ||
-                  res.info.cuisines
-                    .join()
-                    .toLowerCase()
-                    .includes(searchText.toLowerCase())
-              );
-              setFilteredRestaurant(searchFilteredList);
-            }
-          }}
-        >
-          Search
-        </button>
-        {/* <div>
+      <div className="search-filter-section">
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Search for restaurants and food"
+            className="searchBox"
+            data-testid="searchInput"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          ></input>
+          <button
+            className="search_btn"
+            onClick={() => {
+              // Filter the restaurant cards and update the UI
+              // searchtext
+              console.log(searchText.length);
+              if (searchText.length > 0) {
+                const searchFilteredList = listofRestaurants.filter(
+                  (res) =>
+                    res.info.name
+                      .toLowerCase()
+                      .includes(searchText.toLowerCase()) ||
+                    res.info.cuisines
+                      .join()
+                      .toLowerCase()
+                      .includes(searchText.toLowerCase())
+                );
+                setFilteredRestaurant(searchFilteredList);
+              }
+            }}
+          >
+            Search
+          </button>
+          {/* <div>
           <p>You clicked {count} times</p>
         <button onClick={() => setCount(count + 1)}>
           Click me
         </button>
         </div> */}
-      </div>
-      <div className="filter">
-        <button
-          className="filterCountBtn"
-          style={
-            isActive || isVeg || isLessThan300 || isFastDelivery
-              ? activeFilterStyle
-              : buttonStyle
-          }
-        >
-          {(isActive || isVeg || isLessThan300 || isFastDelivery) && (
-            <span className="filterCount">{buttonCount}</span>
-          )}
+        </div>
+        <div className="filter">
+          <button
+            className="filterCountBtn"
+            style={
+              isActive || isVeg || isLessThan300 || isFastDelivery
+                ? activeFilterStyle
+                : buttonStyle
+            }
+          >
+            {(isActive || isVeg || isLessThan300 || isFastDelivery) && (
+              <span className="filterCount">{buttonCount}</span>
+            )}
 
-          <div>Filter</div>
-          <span className="show_filter">
-            <img src={filter} />
-          </span>
-        </button>
+            <div>Filter</div>
+            <span className="show_filter">
+              <img src={filter} />
+            </span>
+          </button>
 
-        <button
-          className="filter-btn"
-          onClick={filter4Rating}
-          style={isActive ? activeButtonStyle : buttonStyle}
-        >
-          Rating 4.0+
-          <span className="xSign" style={isActive ? withX : withoutX}>
-            <img src={cross} alt="cross Sign" />
-          </span>
-        </button>
-        <button
-          onClick={filterFastDelivery}
-          style={isFastDelivery ? activeButtonStyle : buttonStyle}
-        >
-          Fast Delivery
-          {isFastDelivery && (
-            <span className="xSign">
+          <button
+            className="filter-btn"
+            onClick={filter4Rating}
+            style={isActive ? activeButtonStyle : buttonStyle}
+          >
+            Rating 4.0+
+            <span className="xSign" style={isActive ? withX : withoutX}>
               <img src={cross} alt="cross Sign" />
             </span>
-          )}
-        </button>
-        <button
-          onClick={filterLessThan300}
-          style={isLessThan300 ? activeButtonStyle : buttonStyle}
-        >
-          Less than Rs. 300
-          {isLessThan300 && (
-            <span className="xSign">
-              <img src={cross} alt="cross Sign" />
-            </span>
-          )}
-        </button>
-        <button
-          onClick={filterVeg}
-          style={isVeg ? activeButtonStyle : buttonStyle}
-        >
-          Pure Veg
-          {isVeg && (
-            <span className="xSign">
-              <img src={cross} alt="cross Sign" />
-            </span>
-          )}  
-        </button>
-        <button className="clearAllFilter" onClick={clearFilter}>
-          Clear all filters
-        </button>
+          </button>
+          <button
+            onClick={filterFastDelivery}
+            style={isFastDelivery ? activeButtonStyle : buttonStyle}
+          >
+            Fast Delivery
+            {isFastDelivery && (
+              <span className="xSign">
+                <img src={cross} alt="cross Sign" />
+              </span>
+            )}
+          </button>
+          <button
+            onClick={filterLessThan300}
+            style={isLessThan300 ? activeButtonStyle : buttonStyle}
+          >
+            Less than Rs. 300
+            {isLessThan300 && (
+              <span className="xSign">
+                <img src={cross} alt="cross Sign" />
+              </span>
+            )}
+          </button>
+          <button
+            onClick={filterVeg}
+            style={isVeg ? activeButtonStyle : buttonStyle}
+          >
+            Pure Veg
+            {isVeg && (
+              <span className="xSign">
+                <img src={cross} alt="cross Sign" />
+              </span>
+            )}
+          </button>
+          <button className="clearAllFilter" onClick={clearFilter}>
+            Clear all filters
+          </button>
+        </div>
       </div>
+
       <hr className="hrline"></hr>
-      <h2 className="jaipurRes">
+      <h2 className="jaipurRes home-page-heading">
         Restaurants with online food delivery in Jaipur
       </h2>
       <div className="res-container">

@@ -5,6 +5,7 @@ import grocery from "../../assets/groce.svg";
 import UserContext from "../../utils/UserContext";
 import { useSelector } from "react-redux";
 import Login from "../Login/Login.js";
+import offerSvg from "../../assets/offers.png";
 
 export const Header = () => {
   console.log("header render");
@@ -45,7 +46,11 @@ export const Header = () => {
             </li>
             <li>
               <Link to="/offers">
-                Offers <sup className="newOffer"> NEW </sup>
+                <div className="offerContainer">
+                  <img className="offerPng" src={offerSvg} />
+                  <span>Offers</span>
+                  <sup className="newOffer"> NEW </sup>
+                </div>
               </Link>
             </li>
             <li>
