@@ -27,23 +27,17 @@ const RestaurantMenu = () => {
     costForTwoMessage,
     areaName,
     locality,
-    veg,
     cloudinaryImageId,
     avgRating,
     labels,
     sla,
     totalRatingsString,
   } = resMenu?.cards[2]?.card?.card?.info;
-  console.log("dfdfsd", resMenu);
-
-  // const menuItem =
-  //   resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
   // const { itemCards = []} =true ?
   // resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card :
   // resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.categories[0];
 
-  // console.log(resInfo?.cards[4]?.groupedCard);
   const allCards = resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
   const ItemCategory =
     "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
@@ -56,14 +50,11 @@ const RestaurantMenu = () => {
       c.card?.card?.["@type"] === NestedItemCategory
   );
 
-  console.log(resMenu);
-  console.log(allCards);
-  console.log("Filtered: ", itemCategies);
+  // console.log(resMenu);
+  // console.log(allCards);
+  // console.log("Filtered: ", itemCategies);
 
   // const itemCardNew = menuItem.itemCards || menuItem.categories[0].itemCards;
-
-  // if category > 0 then fetch from it otherwise from 1st
-  // console.log(resMenu);
 
   return (
     <div className="menu-page-cont">
@@ -78,11 +69,6 @@ const RestaurantMenu = () => {
             <p className="cuisine">
               {cuisines.join(", ")} - {costForTwoMessage}
             </p>
-            {veg && (
-              <div className="pure-veg-badge">
-                <img src={pureVeg} />
-              </div>
-            )}
             <div className="rating-cont-res-info">
               <span className="star-svg-cont-res">
                 <img src={star} />

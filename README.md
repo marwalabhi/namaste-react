@@ -30,4 +30,4 @@ For running this web app: Use (Allow CORS) extension to bypass CORS policy(for D
 
 - Wix Madefor Text - font-family
 
-**Thanks You**
+**Thank You**
