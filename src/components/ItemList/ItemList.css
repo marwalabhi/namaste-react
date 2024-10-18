@@ -27,8 +27,85 @@
   flex-direction: column;
   gap: 3px;
 }
+.dish-detail-badge-cont{
+  display: flex;
+  margin-bottom: 4px;
+  align-items: center;
+  user-select: none;
+}
+.svg-icon{
+  margin-left: 4px;
+  line-height: 0;
+}
+.vegnonveg-icon-svg-like{
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+.veg-icon-menu {
+  background: rgb(247, 255, 249);
+  color: rgb(17, 102, 73);
+  border: 1px solid rgb(163, 240, 181);
+  border-radius: 8px;
+  padding: 1px 5px;
+}
+.nonveg-icon-menu {
+  background: rgb(255 247 247);
+  border: 1px solid rgb(240 163 163);;
+  color: rgb(102 17 17);
+  border-radius: 8px;
+  padding: 1px 5px;
+}
+.best-seller-befor-badge{
+  width: 26px;
+  filter: invert(0.5) sepia(1) hue-rotate(-45deg) saturate(5) brightness(1);
+  margin-right: 3px;
+}
+.best-seller-badge{
+  color: #FF6E5A;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+}
+.dish-name-title{
+  font-weight: 600;
+}
+.dishPrice > ::before {
+  content: "₹";
+  margin-right: 0.1rem;
+}
 .dishPrice {
   font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+  font-weight: 550;
+  margin-top: 4px;
+}
+.star-container-menu{
+  width: 16px;
+  height: 16px;
+}
+.rating-container{
+  display: flex;
+  margin-top: 12px;
+  font-size: 15px;
+  align-items: center;
+}
+.rating-int{
+  font-weight: 600;
+  color: rgb(17, 102, 73);
+  margin-left: 2px;
+}
+.rating-count-con{
+  color: rgba(2, 6, 12, 0.6);
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.3px;
+  margin-left: 2px;
 }
 .isImage {
   width: 160px;

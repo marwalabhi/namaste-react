@@ -1,30 +1,94 @@
 /* menu page design  */
-.menu {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
-  }
-  .sevices {
-    color: grey;
-    padding: 10px;
-    font-weight: 500;
-  }
-  .cuisine{
-    color: gray;
-    margin-block: 10px;
-    font-weight: 600;
-  }
-  .menuHead{
-    background-color: lightgoldenrodyellow;
-    padding-block: 5px;
-    color: rgba(2, 6, 12, 0.6);
-    width: 50%;
-    border-radius: 8px;
-    margin: auto;
-    letter-spacing: 4px;
-    font-size: 20px;
-  }
-  .veg {
-    font-weight: 600;
-    color: green;
-  }
+.res-menu-header {
+  display: flex;
+  justify-content: space-between;
+  width: 49.5vw;
+  margin: auto;
+  margin-bottom: 8px;
+}
+.res-details-menu {
+  padding: 23px 15px 15px 15px;
+}
+.res-img-menu-design-cont {
+  width: 300px;
+  height: 250px;
+}
+.res-img-in-menu {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+  border-radius: 15px;
+}
+.res-name-menu {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: rgba(2, 6, 12, 0.92);
+}
+.outlet-font {
+  color: black;
+  font-weight: 600;
+}
+.rating-cont-res-info {
+  display: flex;
+  align-items: center;
+}
+.star-svg-cont-res {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  margin-top: -2px;
+}
+.avg-rating-str {
+  color: rgba(2, 6, 12, 0.92);
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  font-weight: 600;
+}
+.address-label {
+  color: black;
+  font-weight: 600;
+}
+.res-address-cont {
+  margin-top: 10px;
+  width: 30rem;
+}
+.delivery-time-str-resInfo {
+  color: black;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.menu-page-cont {
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.sevices {
+  color: grey;
+  padding-block: 10px;
+  font-weight: 500;
+}
+.cuisine {
+  color: #b33307;
+  margin-block: 10px;
+  font-weight: 600;
+}
+.menuHead {
+  background: rgba(2, 6, 12, 0.05);
+  height: 48px;
+  color: rgba(2, 6, 12, 0.6);
+  width: 50%;
+  border-radius: 12px;
+  margin: auto;
+  letter-spacing: 4px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pure-veg-badge {
+  padding-block: 5px;
+}

@@ -14,7 +14,6 @@ const RestaurantCard = ({ resData }) => {
     costForTwo,
   } = resData?.info;
 
-  
   return (
     <div data-testid="#resCard" className="res-card">
       <div className="card_box">
@@ -40,9 +39,7 @@ const RestaurantCard = ({ resData }) => {
 // input - RestaurantCard ==> RestaurantCardPromoted
 
 export const withPromotedLabel = (RestaurantCard) => {
-  
   return (props) => {
-
     return (
       <div>
         <label className="promoted">Open Now</label>

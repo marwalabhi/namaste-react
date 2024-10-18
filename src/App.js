@@ -33,12 +33,12 @@ const Applayout = () => {
     <Provider store={appStore}>
       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         {/* <StrictMode> */}
-          {/* All of these checks are dev-only and do not impact the production build */}
-          <div className="app">
-            <Header /> {/* component composition */}
-            <Outlet />
-            <Footer />
-          </div>
+        {/* All of these checks are dev-only and do not impact the production build */}
+        <div className="app">
+          <Header /> {/* component composition */}
+          <Outlet />
+          <Footer />
+        </div>
         {/* </StrictMode> */}
       </UserContext.Provider>
     </Provider>

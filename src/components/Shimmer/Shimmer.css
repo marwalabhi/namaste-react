@@ -1,28 +1,32 @@
+.shimmer-ui-container {
+  padding-top: 2px;
+}
 .shimmer_container {
-    display: flex;
-    gap: 30px;
-    margin: 0 100px;
-    flex-wrap: wrap;
-    padding-block: 50px;
-  }
-  .shimmer-card {
-    width: 18.5rem;
-    height: 250px;
-    background-color: #f0f0f0;
-    border-radius: 25px;
-  }
+  display: flex;
+  gap: 30px;
+  margin: 0 100px;
+  flex-wrap: wrap;
+  padding-block: 50px;
+}
+.shimmer-card {
+  width: 18.5rem;
+  height: 250px;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+}
 
-  /* Shimmer Styling */
+/* Shimmer Styling */
 
 .loading {
   text-align: center;
-  padding-block: 100px;
+  padding-block: 150px;
   background-color: black;
-  color: white;
+  color: rgb(204, 201, 201);
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  background-image: url(../../assets/hawa.jpg);
+  font-weight: 500;
+  /* background-image: url(../../assets/hawa.jpg); */
   object-fit: cover;
   object-position: 50% 50%;
   background-repeat: no-repeat;
+  box-shadow: 0 3px 15px 0 rgba(40, 44, 63, 0.3);
 }

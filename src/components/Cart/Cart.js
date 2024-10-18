@@ -37,8 +37,7 @@ const Cart = () => {
         </h2>
       )}
       <div className="addedItems">
-
-        <ItemList menuItem={cartItems} button = {false}/>
+        <ItemList menuItem={cartItems} button={false} />
         <Styling>Ready to Checkout Click on it!!</Styling>
       </div>
     </div>

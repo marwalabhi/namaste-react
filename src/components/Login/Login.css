@@ -8,7 +8,7 @@
     overflow: hidden;
     position: fixed;
     top: 0px;
-    z-index: 5;
+    z-index: 10;
     transition-duration: 0.3s;
   }
   .white-loginbar{

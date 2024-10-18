@@ -129,6 +129,7 @@ div.whatsOnYourMind .f-cat-img {
   line-height: 18px;
   font-weight: 520;
   cursor: pointer;
+  height: 36px;
 }
 button.clearAllFilter {
   color: white;
@@ -163,10 +164,15 @@ button.clearAllFilter {
 }
 .notFindText {
   color: gray;
-  padding-block: 7rem;
+  padding-block: 11rem;
   text-align: center;
   flex: 1;
   line-height: 12px;
   font-weight: 550;
-  font-size: 20px;
+  font-size: 25px;
+}
+.search-text-item{
+  color: #44b678;
+  /* color: #ff1493; */
+  /* color: blueviolet; */
 }

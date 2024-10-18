@@ -30,7 +30,13 @@ class About extends Component {
           <label>
             Enter the UserName:{" "}
             <UserContext.Consumer>
-              {({ setUserName, loggedInUser}) => <input type="text" value={loggedInUser} onChange={(e) => setUserName(e.target.value)}></input>}
+              {({ setUserName, loggedInUser }) => (
+                <input
+                  type="text"
+                  value={loggedInUser}
+                  onChange={(e) => setUserName(e.target.value)}
+                ></input>
+              )}
             </UserContext.Consumer>
           </label>
         </div>

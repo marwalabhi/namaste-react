@@ -19,6 +19,7 @@ const AppBody = () => {
   const [filteredRestaurants, setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
   // const [count, setCount] = useState(0);
   const [foodCategoryImg, setFoodCategoryImg] = useState([]);
 
@@ -183,7 +184,8 @@ const AppBody = () => {
         </div>
         <div className="fcat-img-container">
           {foodCategoryImg.map((img) => (
-            <span className="cont-for-each-img"
+            <span
+              className="cont-for-each-img"
               key={img.id}
               style={{ transform: `translateX(-${slider * 100}%)` }}
             >
@@ -314,8 +316,9 @@ const AppBody = () => {
         {/* list of restaurants rendering */}
         {filteredRestaurants.length === 0 && (
           <div className="notFindText">
-            Can't find for text you searched for !! Search for restaurants or
-            its dishes
+            Sorry we couldn't find any matches for{" "}
+            <span className="search-text-item">{searchText}</span> !! Search for
+            restaurants or its dishes
           </div>
         )}
         {filteredRestaurants.map((restaurant) => (

@@ -20,7 +20,6 @@ const MenuCategory = ({ data, showItems, setShowIndex, setFalse }) => {
   };
   console.log("data ", data); // output contain
 
-
   const count = data?.card.itemCards?.length || data?.categories?.length;
   // console.log("data", data);
   const dataType = data.card["@type"];
@@ -51,7 +50,7 @@ const MenuCategory = ({ data, showItems, setShowIndex, setFalse }) => {
         </div>
         <div className="menuCategoryBody">
           {/* restaurant food for each category */}
-          {showItems && <ItemList menuItem={itemCards} button={true}/>}
+          {showItems && <ItemList menuItem={itemCards} button={true} />}
         </div>
       </div>
     </section>
@@ -79,18 +78,19 @@ const MenuCategory = ({ data, showItems, setShowIndex, setFalse }) => {
                     <img src={arrow} />
                   </span>
                 </button>
-                
               </div>
-              
+
               <div className="menuCategoryBody">
-                {showItems && categoryIndex === index &&(
-                  <ItemList menuItem={nestedItemCards[categoryIndex]} button={true} />
+                {showItems && categoryIndex === index && (
+                  <ItemList
+                    menuItem={nestedItemCards[categoryIndex]}
+                    button={true}
+                  />
                 )}
                 {index + 1 < data.card.categories.length && (
                   <div className="hr_line"></div>
                 )}
               </div>
-
             </>
           ))}
         </div>
