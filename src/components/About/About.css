@@ -12,9 +12,13 @@
   align-items: center;
   background-color: honeydew;
   font-weight: 500;
+  gap: 8px;
 }
 .uname {
   color: dodgerblue;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 .inputUserName{
   text-align: center;

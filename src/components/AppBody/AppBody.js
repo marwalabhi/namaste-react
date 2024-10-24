@@ -129,7 +129,7 @@ const AppBody = () => {
   };
 
   useEffect(() => {
-    // called once after initial render (empty dependency array)
+    // called once after initial render (empty dependency array) and of re-render of AppBody component
     fetchData();
     console.log(
       "useEffect: render-cycle completed successfully,   effect executed"
