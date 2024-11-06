@@ -1,4 +1,5 @@
 import "../Login/Login.css";
+import xmark from "../../assets/xmark.png";
 
 const Login = ({ onClose, isLogin }) => {
   const loginStyle = {
@@ -20,18 +21,26 @@ const Login = ({ onClose, isLogin }) => {
         onClick={(evt) => evt.stopPropagation()}
         style={loginStyle}
       >
-        <button onClick={onClose}>Close</button>
-        <h2>Login</h2>
-        <label>
-          Name:
-          <input type="text" placholder="Phone number"></input>
-        </label>
-        <label>
-          Password:
-          <input type="password" placholder="Phone number"></input>
-        </label>
-        <div>or create an account</div>
-        <button style={{ backgroundColor: "orange" }}>Login</button>
+        <div className="login-signUp-cont">
+          <div className="login-or-create-acc">
+            <a className="login-signUp-close-btn" onClick={onClose}>
+              <img className="xmark-login-page" src={xmark} />
+            </a>
+            <div className="login-head-top">Login</div>
+            <div className="new-acc-creation-div">
+              or <span className="creat-an-acc-text">create an account</span>
+            </div>
+          </div>
+          <div className="login-signUp-form">
+            <input
+              className="input-login-email-phone"
+              autoCapitalize="off"
+              placeholder="Email address or Phone Number"
+              type="text"
+            />
+            <button className="login-btn-or">Login</button>
+          </div>
+        </div>
       </div>
     </div>
   );

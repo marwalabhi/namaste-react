@@ -1,22 +1,92 @@
 /* Login page css */
 
-.black-overlay{
-    /* background-color: rgba(0, 0, 0, 0.7); */
-    background: rgba(40, 44, 63, 0.7);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0px;
-    z-index: 10;
-    transition-duration: 0.3s;
-  }
-  .white-loginbar{
-    width: 724px;
-    background-color: white;
-    height: 100%;
-    position: fixed;
-    left: auto;
-    right: 0px;
-    top: 0px;
-  }
+.black-overlay {
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background: rgba(40, 44, 63, 0.7);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  transition-duration: 0.3s;
+}
+.white-loginbar {
+  width: 724px;
+  background-color: white;
+  height: 100%;
+  position: fixed;
+  left: auto;
+  right: 0px;
+  top: 0px;
+}
+.login-signUp-cont {
+  padding-left: 40px;
+  padding-right: 300px;
+  width: 724px;
+}
+.login-head-top {
+  font-size: 30px;
+  margin-top: 25px;
+  font-weight: 600;
+}
+.login-or-create-acc {
+  padding-top: 30px;
+}
+.login-btn-or {
+  border: none;
+  color: #fff;
+  background-color: #490101;
+  height: 48px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login-btn-or:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.new-acc-creation-div {
+  font-weight: 500;
+  position: relative;
+  margin-top: 6px;
+  font-size: 16px;
+}
+div.new-acc-creation-div::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 30px;
+  border: 1px solid #000;
+}
+.creat-an-acc-text {
+  font-weight: 600;
+  color: #ff1493;
+  cursor: pointer;
+}
+.login-signUp-form {
+  margin-top: 50px;
+}
+.label-text-form {
+  font-weight: 500;
+  font-size: 17px;
+}
+.input-login-email-phone {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 5px;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  font-size: 16px;
+  font-weight: 500;
+  outline-color: #44b678;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.login-signUp-close-btn {
+  border: none;
+  cursor: pointer;
+}
+.xmark-login-page {
+  width: 30px;
+  padding-block: 5px;
+}
