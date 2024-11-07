@@ -4,11 +4,12 @@
 .shimmer_container {
   display: flex;
   gap: 30px;
-  margin: 0 100px;
+  margin: 0px 100px;
   flex-wrap: wrap;
   padding-block: 50px;
 }
 .shimmer-card {
+  margin-bottom: 30px;
   width: 18.5rem;
   height: 250px;
   background-color: #f0f0f0;
@@ -29,4 +30,49 @@
   object-position: 50% 50%;
   background-repeat: no-repeat;
   box-shadow: 0 3px 15px 0 rgba(40, 44, 63, 0.3);
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .loading {
+    font-size: calc(20px + 0.5vw);
+    padding-block: 100px;
+  }
+  .shimmer-card {
+    height: 212px;
+    width: 16.5rem;
+    border-radius: 18px;
+    margin-bottom: 20px;
+  }
+  .shimmer_container{
+    gap: 22px;
+    margin: 0 50px;
+    justify-content: center;
+  }
+}
+/* for medium desktops */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .loading {
+    font-size: calc(20px + 0.5vw);
+    padding-block: 110px;
+  }
+  .shimmer-card {
+    height: calc(200px + 00.5vw);
+    width: 232px;
+    border-radius: 25px;
+  }
+  .shimmer_container{
+    gap: 25px;
+    margin: 0 30px;
+    justify-content: center;
+  }
+}
+/* For large desktop */
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  .loading {
+    font-size: calc(20px + 0.5vw);
+    padding-block: 110px;
+  }
+  .shimmer_container{
+    margin: 0 30px;
+    justify-content: center;
+  }
 }

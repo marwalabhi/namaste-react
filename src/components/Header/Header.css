@@ -5,7 +5,7 @@ header {
   box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
   z-index: 5;
   height: 90px;
-  position: sticky;  
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -37,15 +37,15 @@ header {
 .brown {
   color: brown;
 }
-.offerPng{
+.offerPng {
   width: 22px;
 }
-.offerContainer{
+.offerContainer {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.newOffer{
+.newOffer {
   font-size: 11px;
   font-weight: 600;
   color: orange;
@@ -65,7 +65,7 @@ header {
 .grocerySection:hover .groceryImg {
   filter: invert(0.5) sepia(1) hue-rotate(-13deg) saturate(4) brightness(1);
 }
-.offerContainer:hover .offerPng{
+.offerContainer:hover .offerPng {
   filter: invert(0.5) sepia(1) hue-rotate(-13deg) saturate(4) brightness(1);
 }
 .navOptions {
@@ -118,4 +118,147 @@ header {
 .plate_cart img {
   width: 39px;
   filter: invert(1);
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  header {
+    justify-content: initial;
+    gap: 18px;
+  }
+  li.sign-in-li{
+    padding-right: 10px;
+  }
+  .logo-container {
+    flex-shrink: 0;
+  }
+  .logo-container span {
+    font-size: calc(16px + 0.5vw);
+  }
+  .navOptions li {
+    margin-right: calc(20px + 0.5vw);
+    font-size: calc(9px + 0.5vw);
+  }
+  .newOffer {
+    font-size: 9px;
+  }
+  .raj {
+    font-size: calc(8px + 0.5vw);
+    flex-shrink: 0;
+  }
+  .plate_cart img {
+    width: 30px;
+  }
+  .plate_count {
+    font-size: 14px;
+  }
+  .offerPng {
+    width: 18px;
+  }
+  .offerContainer {
+    gap: 4px;
+  }
+  .grocerySection {
+    gap: 4px;
+  }
+  .groceryImg {
+    width: 18px;
+    height: 18px;
+  }
+  .plate_cart {
+    right: 34px;
+  }
+}
+/* for medium desktops */
+@media screen and (min-width: 1200px ) and (max-width: 1439px) {
+  header {
+    justify-content: initial;
+    gap: 30px;
+  }
+  li.sign-in-li{
+    padding-right: 26px;
+  }
+  .logo-container {
+    flex-shrink: 0;
+  }
+  .logo-container span {
+    font-size: calc(19px + 0.5vw);
+  }
+  .navOptions li {
+    margin-right: calc(23px + 0.5vw);
+    font-size: calc(10px + 0.5vw);
+  }
+  .newOffer {
+    font-size: 11px;
+  }
+  .raj {
+    font-size: calc(10px + 0.5vw);
+    flex-shrink: 0;
+  }
+  .plate_cart img {
+    width: 34px;
+  }
+  .plate_count {
+    font-size: 17px;
+  }
+  .offerPng {
+    width: 20px;
+  }
+  .offerContainer {
+    gap: 4px;
+  }
+  .grocerySection {
+    gap: 4px;
+  }
+  .groceryImg {
+    width: 20px;
+    height: 20px;
+  }
+  .plate_cart {
+    right: 38px;
+  }
+}
+/* For large desktops */
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  header {
+    justify-content: initial;
+    gap: calc(35px + 0.5vw);
+  }
+  li.sign-in-li{
+    padding-right: 30px;
+  }
+  .logo-container {
+    flex-shrink: 0;
+  }
+  .logo-container span {
+    font-size: calc(22px + 0.5vw);
+  }
+  .navOptions li {
+    margin-right: calc(23px + 1.5vw);
+    font-size: calc(9px + 0.5vw);
+  }
+  .newOffer {
+    font-size: 12px;
+  }
+  .raj {
+    font-size: calc(12px + 0.5vw);
+    flex-shrink: 0;
+  }
+  .plate_cart img {
+    width: 38px;
+  }
+  .plate_count {
+    font-size: 20px;
+  }
+  .offerPng {
+    width: 22px;
+  }
+  .offerContainer {
+    gap: 6px;
+  }
+  .grocerySection {
+    gap: 6px;
+  }
+  .groceryImg {
+    width: 22px;
+    height: 22px;
+  }
 }

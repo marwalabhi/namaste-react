@@ -62,7 +62,7 @@ const RestaurantMenu = () => {
         <div className="res-details-menu">
           <div className="res-name-menu"> {name}</div>
           <div className="sevices">
-            <div>
+            <div className="outlet-section-head">
               <span className="outlet-font">Outlet </span>
               {areaName}
             </div>

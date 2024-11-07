@@ -36,7 +36,7 @@ const Login = ({ onClose, isLogin }) => {
               className="input-login-email-phone"
               autoCapitalize="off"
               placeholder="Email address or Phone Number"
-              type="text"
+              type="text" required
             />
             <button className="login-btn-or">Login</button>
           </div>

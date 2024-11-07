@@ -11,7 +11,7 @@
 }
 .res-img-menu-design-cont {
   width: 300px;
-  height: 250px;
+  height: 275px;
 }
 .res-img-in-menu {
   width: 100%;
@@ -91,4 +91,119 @@
 }
 .pure-veg-badge {
   padding-block: 5px;
+}
+/* for small desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .res-img-menu-design-cont {
+    width: 16rem;
+    height: 15rem;
+  }
+  .menu-page-cont {
+    margin-top: 25px;
+    margin-bottom: 75px;
+  }
+  .res-menu-header {
+    width: 72.5vw;
+    margin: auto auto 4px;
+  }
+  .sevices {
+    padding-block: 8px;
+  }
+  .res-name-menu {
+    font-size: calc(20px + 0.5vw);
+  }
+  .res-details-menu {
+    padding: 18px 14px 10px;
+  }
+  .cuisine {
+    margin-block: 8px;
+    font-size: 14px;
+  }
+  .rating-cont-res-info {
+    font-size: 14px;
+  }
+  .star-svg-cont-res img {
+    width: 18px;
+    height: 18px;
+  }
+  .star-svg-cont-res {
+    width: 18px;
+    height: 18px;
+    margin-right: 3px;
+  }
+  .outlet-section-head {
+    font-size: 14px;
+  }
+  .res-address-cont {
+    width: 27rem;
+    margin-top: 7px;
+    font-size: 14px;
+  }
+  .delivery-time-str-resInfo {
+    margin-top: 7px;
+    font-size: 14px;
+  }
+  .menuHead {
+    width: 76%;
+    height: 36px;
+    font-size: 17px;
+  }
+}
+/* for medium desktops */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .menu-page-cont {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+  .res-img-menu-design-cont {
+    width: 17rem;
+    height: 16rem;
+  }
+  .res-menu-header {
+    width: 64.5vw;
+    margin: auto auto 6px;
+  }
+  .res-name-menu {
+    font-size: calc(22px + 0.5vw);
+  }
+  .cuisine {
+    font-size: 15px;
+  }
+  .rating-cont-res-info {
+    font-size: 15px;
+  }
+  .outlet-section-head {
+    font-size: 15px;
+  }
+  .res-address-cont {
+    width: 29rem;
+    font-size: 15px;
+  }
+  .delivery-time-str-resInfo {
+    font-size: 15px;
+  }
+  .menuHead {
+    width: 66%;
+    height: 42px;
+    font-size: 18px;
+  }
+}
+/* For large desktop */
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  .res-img-menu-design-cont {
+    width: 17.5rem;
+    height: 16.5rem;
+  }
+  .res-menu-header {
+    width: 58.5vw;
+  }
+  .res-name-menu {
+    font-size: calc(24px + 0.5vw);
+  }
+  .res-address-cont {
+    width: 35rem;
+  }
+  .menuHead {
+    width: 61%;
+  }
 }

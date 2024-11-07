@@ -92,3 +92,96 @@
   border-radius: 5px;
   z-index: 1;
 }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .foodImg {
+    height: 200px;
+    border-radius: 18px;
+  }
+  .card_box {
+    gap: 9px;
+  }
+  .res_name {
+    font-size: calc(11px + 0.5vw);
+  }
+  .content {
+    margin-left: 9px;
+  }
+  .starRating_duration img {
+    width: 17px;
+  }
+  .rating {
+    font-size: calc(9px + 0.5vw);
+    font-weight: 500;
+  }
+  .duration {
+    font-size: calc(9px + 0.5vw);
+  }
+  .xy1 {
+    font-size: calc(8px + 0.5vw);
+  }
+  .price {
+    font-size: calc(7px + 0.5vw);
+  }
+  .res-card {
+    width: 16.5rem;
+  }
+  .promoted {
+    font-size: calc(6px + 0.5vw);
+  }
+}
+/* for medium desktops */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .foodImg {
+    height: calc(200px + 0.5vw);
+    border-radius: 25px;
+  }
+  .res_name {
+    font-size: calc(12px + 0.5vw);
+  }
+  .content {
+    margin-left: 11px;
+  }
+  .card_box {
+    gap: 8px;
+  }
+  .starRating_duration {
+    font-size: 15px;
+  }
+  .xy1 {
+    font-size: calc(11px + 0.3vw);
+  }
+  .price {
+    font-size: calc(11px + 0.3vw);
+  }
+  .starRating_duration img {
+    width: 19px;
+  }
+  .res_name{
+    font-size: calc(11px + 0.5vw);
+  }
+  .res-card {
+    width: 14.5rem;
+  }
+  .promoted {
+    font-size: calc(6px + 0.5vw);
+    padding: 3px 9px;
+  }
+}
+/* For large desktops */
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  .foodImg {
+    height: calc(14.5rem + 0.5vw);
+  }
+  .res_name {
+    font-size: calc(11px + 0.5vw);
+  }
+  .xy1 {
+    font-size: calc(11px + 0.3vw);
+  }
+  .price {
+    font-size: calc(11px + 0.3vw);
+  }
+  .res-card {
+    width: 17.5rem;
+  }
+}

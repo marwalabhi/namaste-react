@@ -3,4 +3,15 @@
   color: rgb(204, 201, 201);
   background-color: black;
   text-align: center;
+  font-weight: 500;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .menu-page-load-shimmer {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .menu-page-load-shimmer {
+    font-size: 28px;
+  }
 }

@@ -69,7 +69,7 @@ const MenuCategory = ({ data, showItems, setShowIndex, setFalse }) => {
                   onClick={() => handleClick(index)}
                   className="category_btn"
                 >
-                  <h3>
+                  <h3 className="nested-cat-item-head">
                     {nestedCategory.title}{" "}
                     {dataType === NestedItemCategory &&
                       "(" + nestedCategory.itemCards.length + ")"}

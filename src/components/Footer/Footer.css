@@ -19,3 +19,29 @@ footer a {
 .footerPart a:hover {
   color: orange;
 }
+/* for small laptops/desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  footer {
+    padding-block: 22px;
+  }
+  footer a {
+    margin-right: 14px;
+    padding: 10px;
+  }
+  .footerPart a {
+    font-size: 14px;
+  }
+}
+/* for medium desktops  */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  footer {
+    padding-block: 25px;
+  }
+  footer a {
+    margin-right: 20px;
+    padding: 14px;
+  }
+  .footerPart a {
+    font-size: 16px;
+  }
+}

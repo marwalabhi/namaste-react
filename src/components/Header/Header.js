@@ -68,7 +68,7 @@ export const Header = () => {
             <li>
               <Link to="/about">About Us</Link>
             </li>
-            <li>
+            <li className="sign-in-li">
               <Link onClick={handleLoginClick}>Sign In</Link>
             </li>
             <li>

@@ -1,4 +1,4 @@
-.food-cat-heading{
+.food-cat-heading {
   display: flex;
   justify-content: space-between;
 }
@@ -7,13 +7,13 @@
   margin: auto;
   padding-block: 16px;
 }
-.fcat-img-container{
+.fcat-img-container {
   cursor: pointer;
   display: flex;
   background: rgb(255, 255, 255);
   overflow: hidden;
 }
-.cont-for-each-img{
+.cont-for-each-img {
   transition-duration: 500ms;
 }
 /* svg:not(:root) {
@@ -22,7 +22,7 @@
 div.whatsOnYourMind .f-cat-img {
   width: 9rem;
 }
-.pn-button-container{
+.pn-button-container {
   position: relative;
   right: 16px;
 }
@@ -33,7 +33,7 @@ div.whatsOnYourMind .f-cat-img {
   display: inline;
   margin-right: 12px;
 }
-.pn-arrow{
+.pn-arrow {
   width: 18px;
 }
 .previousBtn,
@@ -171,8 +171,142 @@ button.clearAllFilter {
   font-weight: 550;
   font-size: 25px;
 }
-.search-text-item{
+.search-text-item {
   color: #44b678;
   /* color: #ff1493; */
   /* color: blueviolet; */
+}
+/* Responsive for small laptops/desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .whatsOnYourMind {
+    width: calc(51.8rem + 0.5vw);
+    padding-block: 13px;
+  }
+  .hrline {
+    margin: 25px calc(6rem + 10px);
+  }
+  .jaipurRes {
+    padding-bottom: 12px;
+  }
+  .home-page-heading {
+    font-size: calc(15px + 0.5vw);
+  }
+  .previousBtn,
+  .nextBtn {
+    padding: 6px 6px 2px;
+  }
+  .pn-arrow {
+    width: 16px;
+  }
+  .pn-button-container {
+    right: 0px;
+  }
+  .res-container {
+    gap: 22px;
+  }
+  div.whatsOnYourMind .f-cat-img {
+    width: calc(6rem + 1vw);
+  }
+  .search input[type="text"] {
+    border-radius: 4px;
+    font-size: calc(11px + 0.5vw);
+    padding: 13px;
+    width: calc(450px + 0.5vw);
+  }
+  ::placeholder {
+    font-size: 14px;
+  }
+  .search_btn {
+    font-size: 14px;
+  }
+  .search {
+    gap: 4px;
+    height: 48px;
+  }
+  .filter button {
+    font-size: 12px;
+    height: 31px;
+  }
+  .notFindText {
+    font-size: calc(14px + 0.5vw);
+  }
+}
+/* for medium desktops */
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .whatsOnYourMind {
+    width: calc(63rem + 0.5vw);
+    padding-block: 15px;
+  }
+  .hrline {
+    margin: 27px calc(6rem + 10px);
+  }
+  .jaipurRes {
+    padding-bottom: 13px;
+  }
+  .home-page-heading {
+    font-size: calc(15px + 0.5vw);
+  }
+  .previousBtn,
+  .nextBtn {
+    padding: 7px 7px 3px;
+  }
+  .pn-arrow {
+    width: 17px;
+  }
+  .pn-button-container {
+    right: 8px;
+  }
+  .res-container {
+    gap: 25px;
+  }
+  div.whatsOnYourMind .f-cat-img {
+    width: calc(7.1rem + 1vw);
+  }
+  .search input[type="text"] {
+    font-size: calc(11px + 0.5vw);
+    padding: 15px;
+    width: calc(465px + 0.5vw);
+  }
+  ::placeholder {
+    font-size: 15px;
+  }
+  .search_btn {
+    font-size: 15px;
+    padding: 12px 40px;
+    width: 10rem;
+  }
+  .search {
+    height: 50px;
+  }
+  .filter button {
+    font-size: 13.5px;
+    height: 33px;
+  }
+  .notFindText {
+    font-size: calc(16px + 0.5vw);
+  }
+}
+/* For large desktops */
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  .whatsOnYourMind {
+    width: calc(72rem + 0.5vw);
+  }
+  .home-page-heading {
+    font-size: calc(16px + 0.5vw);
+  }
+  .res-container {
+    gap: 25px;
+  }
+  div.whatsOnYourMind .f-cat-img {
+    width: calc(8.3rem + 1vw);
+  }
+  .search_btn {
+    width: 10rem;
+  }
+  .search {
+    height: 52px;
+  }
+  .notFindText {
+    font-size: calc(17px + 0.5vw);
+  }
 }
