@@ -7,8 +7,7 @@ import { useSelector } from "react-redux";
 import Login from "../Login/Login.js";
 import offerSvg from "../../assets/offers.png";
 
-export const Header = () => {
-  console.log("header render");
+const Header = () => {
 
   const [showLogin, setShowLogin] = useState(false);
 

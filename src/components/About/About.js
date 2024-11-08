@@ -1,4 +1,4 @@
-import { Component, useContext } from "react";
+import { Component } from "react";
 import UserClass from "../UserClass/UserClass.js";
 import "./About.css";
 import UserContext from "../../utils/UserContext.js";
@@ -12,8 +12,6 @@ class About extends Component {
     // console.log("Parent Component did mount");
   }
   render() {
-    // console.log("Parent render called");
-
     return (
       <div className="about--section">
         <h1 className="aboutUs">About Us</h1>
@@ -42,10 +40,7 @@ class About extends Component {
         </div>
 
         <div>
-          {/* <User name={"Abhiabhishek"} location={"Jaipur"} /> */}
           <UserClass />
-          {/* <UserClass name={"Second Child"} location={"Noida"} /> */}
-          {/* <UserClass name={"Third Child"} location={"Noida"} /> */}
         </div>
       </div>
     );

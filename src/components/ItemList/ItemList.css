@@ -1,7 +1,6 @@
 /* accordian Body */
 .accBody {
   padding: 20px 20px 40px;
-  /* border-bottom: 1px solid lightgray; */
 }
 .categoryHRLine{
   border-bottom: 1px solid lightgray;
@@ -137,9 +136,6 @@
   top: 130px;
 }
 .addButtonContainer{
-  /* position: absolute; */
-  /* top: 130px; */
-  /* right: 23px; */
   display: flex;
   justify-content: center;
 }

@@ -17,7 +17,6 @@
 }
 
 /* Shimmer Styling */
-
 .loading {
   text-align: center;
   padding-block: 150px;
@@ -25,7 +24,6 @@
   color: rgb(204, 201, 201);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  /* background-image: url(../../assets/hawa.jpg); */
   object-fit: cover;
   object-position: 50% 50%;
   background-repeat: no-repeat;

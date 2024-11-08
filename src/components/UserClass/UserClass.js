@@ -4,7 +4,6 @@ import "./UserClass.css";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.name + " constructor called with dummy");
 
     this.state = {
       userInfo: {
@@ -17,32 +16,26 @@ class UserClass extends React.Component {
   }
 
   async componentDidMount() {
-    // console.log(this.props.name + " component did mount called");
     const response = await fetch("https://api.github.com/users/marwalabhi");
     const json = await response.json(); // read response body and parse the JSON: .json= body reading method
-    console.log(
-      "Component did mount -- data fetched -- <this.setState> -- state var is updated"
-    );
+
     // response.json() - parse the response as JSON object
     this.setState({
       userInfo: json,
     });
-   
   }
-  
+
   componentDidUpdate() {
-    console.log("Comoponent Did Update");
+    // console.log("Comoponent Did Update");
   }
 
   componentWillUnmount() {
-    console.log("Comoponent Will Unmount");
+    // console.log("Comoponent Will Unmount");
   }
 
   render() {
     const { name, location, avatar_url, repos_url } = this.state.userInfo;
 
-    console.log(name + " render");
-    
     return (
       <div className="user-card">
         <img className="userImg" src={avatar_url} />

@@ -11,8 +11,7 @@ import menuStar from "../../assets/menuItemStar.svg";
 import bestSellerB from "../../assets/best-seller-badge-icon.png";
 
 const ItemList = ({ menuItem, button }) => {
-  console.log("menuItem ", menuItem);
-
+  
   const [itemAdded, setItemAdded] = useState(false);
 
   const dispatch = useDispatch();
@@ -29,8 +28,8 @@ const ItemList = ({ menuItem, button }) => {
         <></>
       ) : (
         menuItem.map((item, index) => (
-          <>
-            <div className="accBody" key={item?.card?.info?.id}>
+          <div key={item?.card?.info?.id}>
+            <div className="accBody">
               <div className="dish_Container">
                 <div className="dish_details">
                   <div className="dish-detail-badge-cont">
@@ -42,13 +41,13 @@ const ItemList = ({ menuItem, button }) => {
                       )}
                     </div>
 
-                    {item.card.info.isBestseller && (
+                    {item?.card?.info?.isBestseller && (
                       <div className="best-seller-badge">
                         <img
                           className="best-seller-befor-badge"
                           src={bestSellerB}
                         />
-                        {item.card.info.ribbon.text}
+                        {item?.card?.info?.ribbon?.text}
                       </div>
                     )}
                   </div>
@@ -120,7 +119,7 @@ const ItemList = ({ menuItem, button }) => {
             {index + 1 < menuItem.length && (
               <div className="categoryHRLine"></div>
             )}
-          </>
+          </div>
         ))
       )}
     </>

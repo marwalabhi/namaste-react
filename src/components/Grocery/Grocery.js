@@ -1,25 +1,10 @@
 import UserContext from "../../utils/UserContext";
-import { useContext, useEffect } from "react";
-import styles from "./Grocery.module.css";
-import { useRef } from "react";
+import { useContext } from "react";
+import * as styles from "./Grocery.module.css"; // Named import for Tree Shaking
 
 const Grocery = () => {
   const { loggedInUser } = useContext(UserContext);
 
- let intervalRef = useRef(null);
-
-  useEffect(() => {
-     intervalRef.current = setInterval(
-      () => console.log("setInterval executed after every sec", Math.round(Math.random()*100)),
-      1000);
-      console.log(intervalRef);
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
-  const handleClick = () => {
-    clearInterval(intervalRef.current);   
-  };
-  
   return (
     <>
       <h2 className={styles.grocery}>
@@ -27,7 +12,7 @@ const Grocery = () => {
         this web page!!
       </h2>
       <h4 className={styles.gName}>User Name: {loggedInUser}</h4>
-      <button onClick={handleClick}>Stop Printing</button>
+      <button>Stop Printing</button>
     </>
   );
 };

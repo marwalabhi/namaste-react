@@ -77,12 +77,10 @@
 }
 
 /* Higher Order Component */
-
 .promoted {
   position: relative;
   top: 35px;
   left: 0px;
-  /* background-color: #3d7a2a; */
   background-color: #3d383869;
   color: white;
   padding: 5px 11px;

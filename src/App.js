@@ -1,7 +1,6 @@
 import React, { lazy, StrictMode, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client"; /* default import */
 import Header from "./components/Header/Header.js";
-// import {Header} from "./components/Header"; /* yes we can use both, this is named import */
 import AppBody from "./components/AppBody/AppBody.js";
 import Footer from "./components/Footer/Footer.js";
 import About from "./components/About/About.js";

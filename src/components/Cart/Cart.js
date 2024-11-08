@@ -6,23 +6,22 @@ import styled from "styled-components";
 import { useContext } from "react";
 import UserContext from "../../utils/UserContext";
 
+const Styling = styled.div`
+  background-color: mistyrose;
+  color: purple;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 580;
+`;
+
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
-  console.log("cartItems: ", cartItems);
 
   const { loggedInUser } = useContext(UserContext);
   const dispatch = useDispatch();
   const handleClearCart = () => {
     dispatch(clearCart());
   };
-
-  const Styling = styled.div`
-    background-color: mistyrose;
-    color: purple;
-    padding: 20px;
-    cursor: pointer;
-    font-weight: 580;
-  `;
 
   return (
     <div className="cartDesign">

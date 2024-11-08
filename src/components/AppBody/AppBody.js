@@ -1,10 +1,9 @@
 import RestaurantCard, {
   withPromotedLabel,
 } from "../RestaurantCard/RestaurantCard";
-import resList from "../../utils/mockData";
 import { useState, useEffect } from "react";
 import ShimmerUI from "../Shimmer/Shimmer";
-import { json, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import cross from "../../assets/cross1.svg";
 import filter from "../../assets/filter.svg";
@@ -20,7 +19,6 @@ const AppBody = () => {
 
   const [searchText, setSearchText] = useState("");
 
-  // const [count, setCount] = useState(0);
   const [foodCategoryImg, setFoodCategoryImg] = useState([]);
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
@@ -32,8 +30,8 @@ const AppBody = () => {
   const [buttonCount, setButtonCount] = useState(0);
 
   const [slider, moveSlider] = useState(0);
-  // Styling when state changes
 
+  // Styling when state changes
   const buttonStyle = {
     backgroundColor: "white",
     border: "1px solid rgba(2, 6, 12, 0.15)",
@@ -105,14 +103,11 @@ const AppBody = () => {
     setButtonCount(isVeg ? buttonCount - 1 : buttonCount + 1);
   };
 
-  console.log("Body component rendered");
-
   const fetchData = async () => {
     // getRestaurants()
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8947446&lng=75.8301169&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    if (data) console.log("Data fetched");
 
     const json = await data.json();
     setListOfRestaurant(
@@ -121,22 +116,14 @@ const AppBody = () => {
     setFilteredRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log("Coverted and stored in json");
 
     const filteredImg = json.data.cards[0].card.card.imageGridCards.info;
-    // console.log(filteredImg);
     setFoodCategoryImg(filteredImg);
   };
 
   useEffect(() => {
     // called once after initial render (empty dependency array) and of re-render of AppBody component
     fetchData();
-    console.log(
-      "useEffect: render-cycle completed successfully,   effect executed"
-    );
-    console.log(listofRestaurants);
-
-    // document.title = `You clicked ${count} times`;
   }, []);
 
   const onlineStatus = useOnlineStatus();
@@ -148,7 +135,6 @@ const AppBody = () => {
       </h1>
     );
 
-  // console.log(foodCategoryImg);
   const slideToPrevious = () => {
     moveSlider(slider - 3);
   };
@@ -156,7 +142,7 @@ const AppBody = () => {
     slider < 9 && moveSlider(slider + 3);
   };
 
-  // returning jsx
+  // Returning JSX
 
   return listofRestaurants.length === 0 ? (
     <ShimmerUI />
@@ -214,8 +200,6 @@ const AppBody = () => {
             className="search_btn"
             onClick={() => {
               // Filter the restaurant cards and update the UI
-              // searchtext
-              console.log(searchText.length);
               if (searchText.length > 0) {
                 const searchFilteredList = listofRestaurants.filter(
                   (res) =>
@@ -233,12 +217,6 @@ const AppBody = () => {
           >
             Search
           </button>
-          {/* <div>
-          <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-          Click me
-        </button>
-        </div> */}
         </div>
         <div className="filter">
           <button
