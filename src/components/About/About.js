@@ -3,6 +3,7 @@ import UserClass from "../UserClass/UserClass.js";
 import "./About.css";
 import UserContext from "../../utils/UserContext.js";
 
+// Class based component used for learning purposes
 class About extends Component {
   constructor(props) {
     super(props);

@@ -88,7 +88,7 @@ div.new-acc-creation-div::after {
   width: 30px;
   padding-block: 5px;
 }
-@media screen and (min-width: 1200px ) and (max-width: 1439px) {
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
   .white-loginbar {
     width: 550px;
   }
@@ -96,14 +96,14 @@ div.new-acc-creation-div::after {
     width: 25px;
     padding-block: 3px;
   }
-  .login-head-top{
+  .login-head-top {
     margin-top: 20px;
     font-size: 29px;
   }
   .new-acc-creation-div {
     font-size: 14px;
   }
-  div.new-acc-creation-div::after{
+  div.new-acc-creation-div::after {
     bottom: -19px;
   }
   .login-signUp-form {

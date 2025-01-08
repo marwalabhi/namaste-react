@@ -18,6 +18,9 @@ const Offers = () => {
     <>
       <h2 className="head_section">Offers Section of your app</h2>
       <h3 className="head_section">Coming Soon</h3>
+
+      {/* For learning purposes */}
+
       <label>Name: </label>
       <input type="text" placeholder="enter name" />
       <label>Address: </label>
@@ -31,7 +34,7 @@ const Offers = () => {
         city. From 1929 to 1997, it was its capital city.
       </Panel>
       <Panel
-        title="Etymology"
+        title="Accordian used in menu category"
         isActive={activeIndex === 1}
         onShow={() => setActiveIndex(1)}
       >

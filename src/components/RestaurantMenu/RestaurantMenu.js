@@ -33,8 +33,9 @@ const RestaurantMenu = () => {
     sla,
     totalRatingsString,
   } = resMenu?.cards[2]?.card?.card?.info;
+  const { info } = resMenu.cards[2].card.card;
 
-  // const { itemCards = []} =true ?
+  // const { itemCards = [] } = true ?
   // resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card :
   // resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.categories[0];
 
@@ -85,6 +86,13 @@ const RestaurantMenu = () => {
               Deliverable in
               {" " + sla.slaString}
             </div>
+            {info?.veg || info?.name.toLowerCase().includes("veg") ? (
+              <div className="p-pure-veg-badge-cont">
+                <img src={pureVeg} className="p-pure-veg-badge" />
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
         <div className="res-img-menu-design-cont">

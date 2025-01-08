@@ -34,21 +34,26 @@ class UserClass extends React.Component {
   }
 
   render() {
-    const { name, location, avatar_url, repos_url } = this.state.userInfo;
+    const { name, location, avatar_url, html_url, login } = this.state.userInfo;
 
     return (
       <div className="user-card">
         <img className="userImg" src={avatar_url} />
         <div className="card_content">
-          <h2 className="git">Name: {name}</h2>
-          <h3 className="git">Location: {location}</h3>
-          <h4 className="git">Contact: @marwalabhi</h4>
-          <h4 className="git">
-            Repo Link:{" "}
-            <span style={{ color: "blue", cursor: "pointer" }}>
-              {repos_url}
-            </span>
-          </h4>
+          <div className="git">Name: {name}</div>
+          <div className="git">Location: {location}</div>
+          <div className="git">Contact: marwalabhi987@gmail.com</div>
+          <div className="git">
+            Repos Link:{" "}
+            <a
+              href={html_url}
+              target="_blank"
+              className="g-link-style-repo"
+              rel="noopener noreferrer"
+            >
+              Go to GitHub
+            </a>
+          </div>
         </div>
       </div>
     );

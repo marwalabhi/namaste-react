@@ -101,6 +101,18 @@ const AppBody = () => {
   const filterVeg = () => {
     setVeg(!isVeg);
     setButtonCount(isVeg ? buttonCount - 1 : buttonCount + 1);
+    if (isVeg) {
+      setFilteredRestaurant(listofRestaurants);
+    } else {
+      const vegRestaurants1 = filteredRestaurants.filter((res) =>
+        res.info?.name.toLowerCase().includes("veg")
+      );
+      const vegRestaurants2 = filteredRestaurants.filter(
+        (res) => res.info?.veg
+      );
+      const pureVegList = [...vegRestaurants1, ...vegRestaurants2];
+      setFilteredRestaurant(pureVegList);
+    }
   };
 
   const fetchData = async () => {
@@ -203,10 +215,10 @@ const AppBody = () => {
               if (searchText.length > 0) {
                 const searchFilteredList = listofRestaurants.filter(
                   (res) =>
-                    res.info.name
+                    res.info?.name
                       .toLowerCase()
                       .includes(searchText.toLowerCase()) ||
-                    res.info.cuisines
+                    res.info?.cuisines
                       .join()
                       .toLowerCase()
                       .includes(searchText.toLowerCase())

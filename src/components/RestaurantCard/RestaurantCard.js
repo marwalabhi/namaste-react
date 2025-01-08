@@ -4,6 +4,7 @@ import "./RestaurantCard.css";
 
 const RestaurantCard = ({ resData }) => {
   const { info, analytics, cta, widgetId } = resData;
+
   const {
     cloudinaryImageId,
     name,
@@ -12,7 +13,7 @@ const RestaurantCard = ({ resData }) => {
     cuisines,
     areaName,
     costForTwo,
-  } = resData?.info;
+  } = info;
 
   return (
     <div data-testid="#resCard" className="res-card">
@@ -40,9 +41,11 @@ const RestaurantCard = ({ resData }) => {
 
 export const withPromotedLabel = (RestaurantCard) => {
   return (props) => {
+    const { resData } = props;
+    const isOpen = resData?.info?.availability?.opened;
     return (
       <div>
-        <label className="promoted">Open Now</label>
+        <label className="promoted">{isOpen ? "Open Now" : "Closed"}</label>
         <RestaurantCard {...props} />
       </div>
     );

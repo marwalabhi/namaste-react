@@ -2,13 +2,22 @@
   text-align: center;
   margin-block: 50px;
 }
+.c-your-cart-heading {
+  font-size: 33px;
+  font-weight: 600;
+}
+.c-cart-head-contaier {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
 .clear_btn {
-  padding: 15px 25px;
-  margin: 50px;
+  padding: 11px 23px;
   border: none;
   background-color: black;
   color: white;
-  border-radius: 9px;
+  border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -19,16 +28,32 @@
 /* Cart items */
 .addedItems {
   width: 60vw;
-  margin: 90px auto;
+  margin: 35px auto 90px;
   border-radius: 15px;
 }
-.emptyCart {
+.c-empty-Cart {
   color: grey;
-  padding-block: 200px;
+  padding-block: 17rem;
   font-weight: 550;
+  font-size: 21px;
 }
-.cartHrLine{
+.cartHrLine {
   border: 1px solid #d1d1d1;
   width: 60vw;
   margin: auto;
+}
+.c-total-price-value::before {
+  content: "₹";
+  margin-right: 0.1rem;
+}
+.c-total-price-value {
+  font-size: 18px;
+}
+.c-to-pay-cont {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.c-to-pay-heading {
+  color: black;
 }

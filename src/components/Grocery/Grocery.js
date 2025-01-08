@@ -12,7 +12,7 @@ const Grocery = () => {
         this web page!!
       </h2>
       <h4 className={styles.gName}>User Name: {loggedInUser}</h4>
-      <button>Stop Printing</button>
+      {/* <button>Stop Printing</button> */}
     </>
   );
 };

@@ -70,6 +70,7 @@
   color: grey;
   padding-block: 10px;
   font-weight: 500;
+  position: relative;
 }
 .cuisine {
   color: #b33307;
@@ -89,8 +90,12 @@
   align-items: center;
   justify-content: center;
 }
-.pure-veg-badge {
-  padding-block: 5px;
+.p-pure-veg-badge-cont {
+  margin-block: 15px;
+}
+.p-pure-veg-badge {
+  position: absolute;
+  bottom: -15px;
 }
 /* for small desktops */
 @media screen and (min-width: 992px) and (max-width: 1199px) {

@@ -1,19 +1,25 @@
 .user-card {
-    display: flex;
-    gap: 50px;
-    margin: 100px;
-    border: 2px solid grey;
-    border-radius: 15px;
-  }
-  .user-card {
-    padding: 20px;
-  }
-  .git{
-    text-align: left;
-    padding: 10px;
-  }
-  .userImg {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
+  display: flex;
+  gap: 50px;
+  margin: 100px;
+  border: 2px solid grey;
+  border-radius: 15px;
+  padding: 20px;
+  align-items: center;
+}
+.git {
+  text-align: left;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "poppins";
+}
+.userImg {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.g-link-style-repo {
+  text-decoration: none;
+}
