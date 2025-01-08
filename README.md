@@ -33,7 +33,7 @@ To run this app locally, you’ll need:
     The extension is required to bypass CORS restrictions while fetching data from the Swiggy API.
 
 ### Demo
-🌐 Live App: [Click here to check it out on Vercel!](https://khamma-ghanni-e1t27mscb-abhishek-marwals-projects.vercel.app/)
+🌐 Live App: [Click here to check it out on Vercel!](https://khamma-ghanni-sa.vercel.app/)
 
 **Note:** 
 > For running this web-app: Use (Allow CORS) extension to bypass CORS policy(For Development, Learning purposes)
